@@ -16,3 +16,6 @@ cat /etc/services | sort -k 2 -n | tail -n 5
 | Hello from RTU MIREA! |
 +-----------------------+
 Перед отправкой решения проверьте его в ShellCheck на предупреждения.
+
+ ./banner.sh "Hello from RTU MIREA!"
+
