@@ -62,3 +62,11 @@ h hello include int main n printf return stdio void world
 
 Задача 9
 Написать программу, которая заменяет в файле последовательности из 4 пробелов на символ табуляции. Входной и выходной файлы задаются аргументами.
+![image](https://github.com/user-attachments/assets/fdc72567-dd92-4265-836d-1f26910b260e)
+![image](https://github.com/user-attachments/assets/1cd1825d-52a9-464f-8848-6974c43aac03)
+
+Задача 10
+Написать программу, которая выводит названия всех пустых текстовых файлов в указанной директории. Директория передается в программу параметром.
+![image](https://github.com/user-attachments/assets/f1a8013f-8f79-4dcf-a05c-afef6c5478e1)
+![image](https://github.com/user-attachments/assets/bea25192-25cc-4028-8360-0d756af11727)
+
