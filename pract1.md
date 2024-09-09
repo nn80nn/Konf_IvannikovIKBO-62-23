@@ -50,3 +50,15 @@ h hello include int main n printf return stdio void world
 ![image](https://github.com/user-attachments/assets/b1da7926-b376-43af-9e5d-fe4bd813c33b)
 ![image](https://github.com/user-attachments/assets/79beab5a-0486-4593-968b-828e7356b011)
 
+Задача 7
+Написать программу для нахождения файлов-дубликатов (имеющих 1 или более копий содержимого) по заданному пути (и подкаталогам).
+![image](https://github.com/user-attachments/assets/62c8f7e8-e424-4022-ad3f-174b28859416)
+![image](https://github.com/user-attachments/assets/2e17e0bf-e585-47a8-a56d-56e5923df358)
+
+Задача 8
+Написать программу, которая находит все файлы в данном каталоге с расширением, указанным в качестве аргумента и архивирует все эти файлы в архив tar.
+![image](https://github.com/user-attachments/assets/babac699-74f1-497a-ad27-e789be1835aa)
+![image](https://github.com/user-attachments/assets/30f7bd94-37bb-42c3-aa4c-884e2f0da4af)
+
+Задача 9
+Написать программу, которая заменяет в файле последовательности из 4 пробелов на символ табуляции. Входной и выходной файлы задаются аргументами.
