@@ -2,6 +2,8 @@
 Вывести отсортированный в алфавитном порядке список имен пользователей в файле passwd (вам понадобится grep).
 
 [mn@archlinux ~]$ grep -o '^[^:]*:' /etc/passwd | cut -d: -f1 | sort
+![image](https://github.com/user-attachments/assets/07425d90-ae85-4b09-b405-133399315fb0)
+
 
 
 Задача 2
