@@ -8,7 +8,10 @@
 
 Задача 2
 Вывести данные /etc/protocols в отформатированном и отсортированном порядке для 5 наибольших портов, как показано в примере ниже:
+
 cat /etc/services | sort -k 2 -n | tail -n 5
+![image](https://github.com/user-attachments/assets/fbfbccf0-332e-4b8e-8fa7-dd24533305f1)
+
 
 Задача 3
 Написать программу banner средствами bash для вывода текстов, как в следующем примере (размер баннера должен меняться!):
@@ -20,4 +23,7 @@ cat /etc/services | sort -k 2 -n | tail -n 5
 Перед отправкой решения проверьте его в ShellCheck на предупреждения.
 
  ./banner.sh "Hello from RTU MIREA!"
+ ![image](https://github.com/user-attachments/assets/94e2662f-e4c2-400c-b0b4-d49e9e69b0a4)
+![image](https://github.com/user-attachments/assets/931dc141-3716-4ed2-be60-ae790a0b3993)
+
 
