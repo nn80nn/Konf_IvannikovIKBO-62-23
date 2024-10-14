@@ -33,6 +33,8 @@ python __main__.py
 ```bash
 shell_emulator.py           # Файл с реализацией команд
 test_shell_emulator.py      # Файл с тестами для команд
+testfs.tar # архив с файловой системой
+log.xml # лог файл
 ```
 
 # 4. Запуск тестов
