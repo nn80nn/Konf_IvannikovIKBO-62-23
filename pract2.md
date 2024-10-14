@@ -9,7 +9,7 @@
 
 https://github.com/expressjs/express
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/d10ae8f7-970c-4c19-807c-15f7d776be7a)
 
 
 Задача 3
