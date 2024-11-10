@@ -122,3 +122,61 @@ Initial commit: add prog.py
 ```
 
 ---
+
+
+
+## Задача 4
+
+**Цель:**  
+Написать программу на Python, которая выводит список содержимого всех объектов репозитория, используя команду `git cat-file -p`.
+
+**Код программы:**
+
+```python
+import subprocess
+
+def list_git_objects():
+    # Получаем список всех объектов в репозитории
+    try:
+        objects = subprocess.check_output(["git", "rev-list", "--objects", "--all"], text=True).strip().splitlines()
+        
+        # Перебираем объекты и выводим их содержимое
+        for obj in objects:
+            obj_hash = obj.split()[0]
+            print(f"Объект: {obj_hash}")
+            try:
+                content = subprocess.check_output(["git", "cat-file", "-p", obj_hash], text=True)
+                print(content)
+                print("-" * 40)  # Разделитель для удобства
+            except subprocess.CalledProcessError as e:
+                print(f"Ошибка при чтении объекта {obj_hash}: {e}")
+    except subprocess.CalledProcessError as e:
+        print(f"Ошибка при выполнении команды Git: {e}")
+
+# Вызов функции
+list_git_objects()
+```
+
+**Описание работы программы:**  
+1. Скрипт получает список всех объектов в репозитории, используя команду `git rev-list --objects --all`, которая выводит хэши всех объектов.
+2. Для каждого объекта выполняется `git cat-file -p <хэш объекта>`, чтобы вывести его содержимое.
+3. Если в процессе работы возникает ошибка, программа выводит сообщение об ошибке.
+
+**Пример вывода программы:**  
+Пример вывода с возможным содержимым объектов в репозитории:
+
+```plaintext
+Объект: 1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b
+commit 1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b
+Author: Coder 1 <coder1@example.com>
+Date:   Sun Oct 11 10:00:00 2023 +0300
+
+Initial commit: add prog.py
+----------------------------------------
+
+Объект: 4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e
+blob 4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e
+print('Hello, world!')
+----------------------------------------
+...
+```
