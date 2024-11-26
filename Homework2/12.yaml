@@ -1,0 +1,4 @@
+repo_path: ./Economic_culture
+visualizer_path: C:\Users\HUAWEI\AppData\Roaming\npm\mmdc
+output_image: ./graph.png
+target_file: lection2.md
