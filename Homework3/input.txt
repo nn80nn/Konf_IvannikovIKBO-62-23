@@ -1,0 +1,38 @@
+title = "TOML"
+
+var port 8080
+var timeout 30
+
+server_config = dict(
+    address = "0.0.0.0",
+    port = #{port},
+    timeout = #{timeout}
+)
+
+
+var db_name "example_db"
+var max_connections 100
+
+database_config = dict(
+    name = #{db_name},
+    user = "admin",
+    password = "password",
+    max_connections = #{max_connections}
+)
+
+
+var app_name "MyApp"
+var debug_mode true
+
+app_config = dict(
+    name = #{app_name},
+    version = "1.0.0",
+    debug = #{debug_mode}
+)
+
+# Application settings
+
+    app = #{app_config}
+{-
+njvmmvc
+-}
