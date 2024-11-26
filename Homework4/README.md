@@ -20,7 +20,6 @@ python -m venv venv
 venv\Scripts\activate
 # Для MacOS/Linux:
 source venv/bin/activate
-pip install pytest
 ```
 
 ## Запуск
