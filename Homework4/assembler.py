@@ -15,47 +15,47 @@ def assemble_line(line):
 
     if command == "LOAD_CONST":
         A = COMMANDS["LOAD_CONST"]
-        B = int(tokens[1])  # Константа (24 бита)
-        C = int(tokens[2])  # Адрес (6 бит)
+        B = int(tokens[1])  
+        C = int(tokens[2]) 
         return [
             A,
-            (B >> 16) & 0xFF,  # Старшие 8 бит константы
-            (B >> 8) & 0xFF,   # Средние 8 бит
-            B & 0xFF,          # Младшие 8 бит
-            C & 0x3F           # Адрес в пределах 6 бит
+            (B >> 16) & 0xFF,  
+            (B >> 8) & 0xFF,   
+            B & 0xFF,          
+            C & 0x3F           
         ]
 
     elif command == "READ_MEM":
         A = COMMANDS["READ_MEM"]
-        B = int(tokens[1])  # Адрес регистра (6 бит)
-        C = int(tokens[2])  # Смещение (12 бит)
-        D = int(tokens[3])  # Адрес регистра (6 бит)
+        B = int(tokens[1])  
+        C = int(tokens[2])  
+        D = int(tokens[3])  
         return [
             A,
-            (B & 0x3F) << 2 | (C >> 10) & 0x03,  # Адрес регистра и старшие 2 бита смещения
-            (C >> 2) & 0xFF,                    # Средние 8 бит смещения
-            (C & 0x03) << 6 | (D & 0x3F)        # Младшие 2 бита смещения и адрес регистра
+            (B & 0x3F) << 2 | (C >> 10) & 0x03,  
+            (C >> 2) & 0xFF,                   
+            (C & 0x03) << 6 | (D & 0x3F)        
         ]
 
     elif command == "WRITE_MEM":
         A = COMMANDS["WRITE_MEM"]
-        B = int(tokens[1])  # Адрес регистра (6 бит)
-        C = int(tokens[2])  # Адрес памяти (12 бит)
+        B = int(tokens[1])  
+        C = int(tokens[2])  
         return [
             A,
-            (B & 0x3F) << 2 | (C >> 10) & 0x03,  # Адрес регистра и старшие 2 бита адреса
-            (C >> 2) & 0xFF,                    # Средние 8 бит адреса
-            (C & 0x03) << 6                     # Младшие 2 бита адреса
+            (B & 0x3F) << 2 | (C >> 10) & 0x03,  
+            (C >> 2) & 0xFF,                    
+            (C & 0x03) << 6                     
         ]
 
     elif command == "BITREVERSE":
         A = COMMANDS["BITREVERSE"]
-        B = int(tokens[1])  # Адрес регистра (6 бит)
-        C = int(tokens[2])  # Адрес регистра (6 бит)
+        B = int(tokens[1])  
+        C = int(tokens[2])  
         return [
             A,
-            (B & 0x3F) << 2 | (C >> 4) & 0x03,  # Адрес регистра и старшие 2 бита второго адреса
-            (C & 0x0F) << 4                     # Младшие 4 бита второго адреса
+            (B & 0x3F) << 2 | (C >> 4) & 0x03,  
+            (C & 0x0F) << 4                     
         ]
 
     else:
